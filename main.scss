@@ -1,0 +1,85 @@
+$color-primary: #9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary: #99E2D0;
+$color-white: #fff;
+$color-body: #ecebeb;
+
+@mixin position-center($color:$color-white){
+    display: flex;
+    justify-content: center;
+    background-color: $color;
+}
+
+
+body{
+    background-color: $color-body;
+}
+
+header{
+    @include position-center();
+    border-bottom: 1px solid black;
+    box-shadow: 0px 2px grey;
+    a{
+        display: flex;
+        color: black;
+    }
+}
+
+.icon-local{
+    @include position-center($color-body);
+    height: 50px;
+    margin-top: 8px;
+    .fa-map-marker-alt{
+        margin: auto;
+    }
+}
+
+
+.presentation{
+    @include position-center($color-body);
+    flex-direction: column;
+    border-top: 1px solid black;
+    box-shadow: 0px 0px 5px grey;
+
+    .discover{
+        @include position-center();
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 20px 10px 20px;
+        h2{
+            margin: auto;
+            font-size: 23px;
+        }
+        .btn{
+            background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+            border-radius: 10% / 50%;
+            height: 50px;
+            
+
+            &_explore{
+                display: flex;
+                padding-top: 10px;
+                justify-content: center;
+                align-content: center;
+                color: $color-white;
+            }
+        }
+        }
+}
+
+img 
+{
+    width: 270px;
+}
+ 
+.btn {
+    .fa-heart {
+        color: $color-white;
+        text-shadow: 1px 1px 5px black;
+        
+        &:active, &:focus, &:hover{
+            color: $color-primary;
+        }
+    }
+    
+}
