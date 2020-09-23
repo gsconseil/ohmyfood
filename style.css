@@ -1,0 +1,73 @@
+body {
+  background-color: #ecebeb;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 2px grey;
+}
+header a {
+  display: flex;
+  color: black;
+}
+
+.icon-local {
+  display: flex;
+  justify-content: center;
+  background-color: #ecebeb;
+  height: 50px;
+  margin-top: 8px;
+}
+.icon-local .fa-map-marker-alt {
+  margin: auto;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  background-color: #ecebeb;
+  flex-direction: column;
+  border-top: 1px solid black;
+  box-shadow: 0px 0px 5px grey;
+}
+.presentation .discover {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+}
+.presentation .discover h2 {
+  margin: auto;
+  font-size: 23px;
+}
+.presentation .discover .btn {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 10%/50%;
+  height: 50px;
+}
+.presentation .discover .btn_explore {
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+}
+
+img {
+  width: 270px;
+}
+
+.btn .fa-heart {
+  color: #fff;
+  text-shadow: 1px 1px 5px black;
+}
+.btn .fa-heart:active, .btn .fa-heart:focus, .btn .fa-heart:hover {
+  color: #9356DC;
+}
+
+/*# sourceMappingURL=style.css.map */
