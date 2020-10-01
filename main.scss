@@ -2,8 +2,15 @@
 
 @font-face{
     font-family: shrikhand-regular;
-    src: url(polices/Shrikhand-Regular.otf);
+    src: url(./polices/Shrikhand-Regular.otf);
 }
+
+//queries
+        //mobile
+$mobile_s: 320px;
+$mobile_m: 375px;
+$mobile_l: 425px;
+
 
 //colors
 
@@ -12,6 +19,7 @@ $color-secondary:#FF79DA;
 $color-tertiary: #99E2D0;
 $color-white: #fff;
 $color-body: #ecebeb;
+$color-gradient: linear-gradient(to bottom right, $color-secondary, $color-primary);
 
 
 //mixin and placeholder
@@ -20,6 +28,19 @@ $color-body: #ecebeb;
     display: flex;
     justify-content: center;
     background-color: $color;
+}
+
+@mixin btn_step ($right: 35px){
+    position: relative;
+    right: $right;
+    border: 1px solid $color-primary;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    background-color: $color-primary;
+    color: $color-white;
 }
 
 %btn-new {
@@ -38,6 +59,9 @@ body{
     background-color: $color-body;
 }
 
+
+
+// ----HEADER----   
 header{
     @include position-center();
     border-bottom: 1px solid black;
@@ -52,6 +76,8 @@ header{
     }
 }
 
+
+// -----LOCALISATION-----
 .icon-local{
     @include position-center($color-body);
     height: 50px;
@@ -62,6 +88,7 @@ header{
 }
 
 
+// ----PRESENTATION----
 .presentation{
     @include position-center($color-body);
     flex-direction: column;
@@ -70,6 +97,7 @@ header{
 
     .discover{
         @include position-center();
+        height: 215px;
         flex-direction: column;
         text-align: center;
         padding: 10px 20px 10px 20px;
@@ -92,7 +120,48 @@ header{
             }
         }
         }
+        .explanation{
+            height: 360px;
+            i{
+                position: relative;
+                right: 20px;
+            }
+            .container_step{
+                display: flex;
+                height: 150px;
+                flex-direction: column;
+                align-items: center;
+                height: 73%;
+            
+            }
+            .btn_step{
+                display: flex;
+                margin: 10px;
+                width: 300px;
+                border: 1px solid $color-body;
+                border-radius: 30px;
+                box-shadow: 3px 3px 3px grey;
+                padding: 15px;
+                font-weight: bold;
+                @media (max-width: $mobile_s) {
+                    width: 230px;
+                }
+                @media (min-width: $mobile_m) {
+                    width: 280px;
+                }
+
+                &:hover{
+                    background-color: #F5EDFF;
+                    color: $color-primary;
+                }
+            }
+            .step__1, .step__2, .step__3 {
+                @include btn_step()
+            }
+        }
 }
+
+// ---PLACEMENT---
 
 img 
 {
@@ -100,12 +169,13 @@ img
     height: 180px;
 }
  
+    // BTN LIKE 
 .btn {
     .fa-heart {
         color: $color-white;
         text-shadow: 1px 1px 5px black;
         
-        &:active, &:focus, &:hover{
+        &:active{
             color: $color-primary;
         }
     }
@@ -114,4 +184,17 @@ img
 
 .info_new{
     @extend %btn-new;
+}
+
+
+//footer
+footer {
+    background-color: #353535;
+    color: $color-white;
+    padding: 15px 15px 15px 15px;
+    .container_footer{
+    }
+    h3{
+        font-family: shrikhand-regular;
+    }
 }

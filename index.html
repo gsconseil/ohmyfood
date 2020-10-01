@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!--CSS-->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
 
   <!--FONTS-->
    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Gelasio&family=Kalam&family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
@@ -44,63 +44,78 @@
 
 	<element class="explanation">
 		<h2>How it works</h2>
-			<div class="btn_step"><i class="fas fa-mobile-alt"></i> Chose a restaurant</div>
-			<div class="btn_step"><i class="fas fa-tasks"></i> Create your menu</div>
-			<div class="btn_step"><i class="fas fa-store"></i> Go enjoy it at the restaurant</div>
+
+		<div class="container_step">
+			<div class="btn_step"> <span class="step step__1">1</span> <i class="fas fa-mobile-alt"></i> Chose a restaurant</div>
+			 <div class="btn_step"> <span class="step step__2">2</span> <i class="fas fa-tasks"></i> Create your menu</div>
+			 <div class="btn_step"> <span class="step step__3">3</span> <i class="fas fa-store"></i> Go enjoy it at the restaurant</div>
+		</div>
 	</element>
 </article>
 
 <main class="place">
-	<h2>Restaurants</h2>
+
+	<h2 class="title_main">Restaurants</h2>
+
 	<!--place 1 the full palette-->
 	<div class="place-1">
 		<figure>
-			<img src="palette.jpg" alt="Présentation visuel du restaurant">
+			<img src="images\restaurants/palette.jpg" alt="Présentation visuel du restaurant">
 			<div class="info_new">New</div>
 		</figure>
-		<h2>The full palette</h2>
-		<p>New York</p>
+		<div class="text">
+		<h2 class="menu_title">The full palette</h2>
+		<!-- BTN_LIKE -->
 		<div class="btn btn_like">
 			<i class="fas fa-heart"></i>
 		</div>
+		</div>
+
+		<p>New York</p>
 	</div>
 
 <!--place 2 the enchanted plate-->
 	<div class="place-2">
 		<figure>
-			<img src="enchanted.jpg" alt="Présentation visuel du restaurant">
+			<img src="images/restaurants/enchanted.jpg" alt="Présentation visuel du restaurant">
 			<div class="info_new">New</div>
 		</figure>
-		<h2>The enchanted plate</h2>
-		<p>New York</p>
-		<element class="btn btn_like">
+		<h2 class="menu_title">The enchanted plate</h2>
+		<!--BTN_LIKE-->
+		<div class="btn btn_like">
 			<i class="fas fa-heart"></i>
-		</element>
+		</div>
+
+		<p>New York</p>
 	</div>
 <!-- place 3 Bastille -->
 	<div class="place-3">
 		<figure>
-			<img src="bastille.jpg" alt="Présentation visuel du restaurant">
+			<img src="images/restaurants/bastille.jpg" alt="Présentation visuel du restaurant">
 			<div class="info_new">New</div>
 		</figure>
-		<h2>Bastille</h2>
-		<p>New York</p>
+		<h2 class="menu_title">Bastille</h2>
+		<!--BTN_LIKE-->
 		<div class="btn btn_like">
 			<i class="fas fa-heart"></i>
 		</div>
+
+		<p>New York</p>
 	</div>
 
 	<!-- Place 4 Le gourmand -->
 	<div class="place-4">
 		<figure>
-			<img src="Le_gourmand.jpg" alt="Présentation visuel du restaurant">
+			<img src="images/restaurants/Le_gourmand.jpg" alt="Présentation visuel du restaurant">
 			<div class="info_new"> New</div>
 		</figure>
-		<h2>Le gourmand</h2>
-		<p>New York</p>
+		<h2 class="menu_title">Le gourmand</h2>
+		<!--BTN_LIKE-->
 		<div class="btn btn_like">
 			<i class="fas fa-heart"></i>
 		</div>
+		<p>New York</p>
+		
 	</div>
 </main>
 
@@ -110,8 +125,8 @@
 			<h3>Ohmyfood</h3>
 		</div>
 		<div class="container_legal_info">
-			<p><i class="fas fa-utensils"> Suggest a restaurant</i></p>
-			<p><i class="fas fa-hands-helping"> Become a partner</i></p>
+			<p><i class="fas fa-utensils"></i> Suggest a restaurant</p>
+			<p><i class="fas fa-hands-helping"></i> Become a partner</p>
 			<p>Legal</p>
 			<p>Contact</p>
 		</div>
